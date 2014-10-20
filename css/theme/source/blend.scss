@@ -170,6 +170,10 @@ section quote{
 	padding-top:50px;
 }
 
+svg.fullsvg{
+	width:100%;
+}
+
 $parts: accueil, question, speaker, robot;
 @for $part from 1 through length($parts){
 	html.#{nth($parts, $part)} .breadcrumb ul li[data-state-link=#{nth($parts,$part)}] {
