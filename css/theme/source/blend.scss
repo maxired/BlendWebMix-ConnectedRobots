@@ -1,0 +1,241 @@
+/**
+ * Blend theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/7aC-Y4V2UPHQp-tqeekgkA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../lib/font/league_gothic-webfont.eot');
+	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #f7f7f7;
+$headingColor: #333;
+$headingTextShadow: none; 
+$backgroundColor: #fafafa;
+$linkColor: #8b743d;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+
+$breadcrumbHeight: 50px;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+html{
+	background-color : #fafafa; 
+}
+
+.reveal {
+	
+	background:  url(http://www.blendwebmix.com/wp-content/themes/event-manager/images/inner-bg.jpg) repeat-x, url(http://www.blendwebmix.com/wp-content/themes/event-manager/images/bg.png) top no-repeat;
+	position:absolute;
+	top: $breadcrumbHeight;
+	left:0px;
+	right:0px;
+	width:100%;
+	bottom:0px;
+	color: #7f7f7f;
+}
+
+section.present{
+	background-color:white;
+	border: solid 1px #d2d2d2;
+}
+
+.breadcrumb {
+	background-color:#fafafa;
+	width:100px;
+	position:absolute;
+	top:0px;
+	width:100%;
+	text-align:center;
+	font-family:'Lato' ,sans-serif;
+}
+.breadcrumb ul{
+	margin:0px;
+
+}
+.breadcrumb ul li{
+	display: inline-block;
+	color:#686868;
+	padding-left:5px;
+	padding-right:5px;
+	margin-top:0px;
+	padding-top:10px;
+	height:$breadcrumbHeight;
+}
+
+
+
+.reveal  section.present{
+	height:100%;
+	padding-top:0px;
+}
+
+.colContainer{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	flex:1;
+}
+
+.colContainer .col{
+	width:32%;
+	display:inline-block;
+	margin:0px;
+	color:white;
+	height:100%;
+}
+
+.colContainer .col1{ background: #00a5e0; }
+.colContainer .col2{ background: #b0ca0f; }
+.colContainer .col3{ background: #e6421d; }
+
+.colContainer .col .coltitle{
+	padding-bottom:10px;
+}
+
+.reveal i{
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+.reveal h2.red{
+	background : #de4129;
+	color:white;
+	padding:20px;
+}
+
+
+.reveal h2.blue{
+	background : #00a3e0;
+	color:white;
+	padding:20px;
+}
+
+.reveal h2.green{
+	background : #b0ca0f;
+	color:white;
+	padding:20px;
+}
+
+section quote{
+	border:0px solid #de4129;
+	border-radius: 20px;
+	display:block;
+	padding:20px; 
+	margin:20px; 
+}
+
+.reveal section quote i {
+	font-style:italic;
+	display:block;
+	font-size:24px;
+	padding-top:5px;
+}
+
+.reveal table th, .reveal table td{
+	text-align:center;
+}
+
+.reveal .bold{
+	font-weight:800;
+}
+.reveal h1{
+	padding-top:50px;
+}
+
+svg.fullsvg{
+	width:100%;
+}
+
+$parts: accueil, question, speaker, robot, cloud, iot, business;
+@for $part from 1 through length($parts){
+	html.#{nth($parts, $part)} .breadcrumb ul li[data-state-link=#{nth($parts,$part)}] {
+	color:black;
+	border-top : 5px solid #de4129;
+}	
+}
+
+section .panel{
+	width:50%;
+	display: inline-block;
+	text-align:center;
+	height:30%;
+	max-width:40%;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position: center;
+}
+
+section .panel.h50{
+	height:calc(50% - 65px);
+}
+
+section .panel30{
+	width:20%;
+	height:100px;
+	display: inline-block;
+	text-align:center;
+	max-width:40%;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position: center;
+}
+
+section.stack.present{
+	background-color:transparent;
+	border:none;
+}
+
+section.empty{
+	background-color:transparent;
+	border:none;
+}
+
+section.flex{
+	display:flex !important;
+}
+.reveal section img.noborder{
+	border:none;
+	box-shadow: none;
+}

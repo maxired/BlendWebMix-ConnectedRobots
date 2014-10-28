@@ -1,52 +1,410 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
-
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>reveal.js - The HTML Presentations Framework</title>
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
+		<title>ROBOTS CONNECTÉS : ATTENTION À LA DÉFERLANTE</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="ROBOTS CONNECTÉS : ATTENTION À LA DÉFERLANTE">
+		<meta name="author" content="Dalmais Maxence">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/blend.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			};
+		</script>
 
 		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-
 	</head>
+
 	<body>
-		<div class="wrapper">
 
-			<header>
+	<div class="breadcrumb">
+		<ul>
+			<li class="current" data-state-link="accueil">ACCUEIL</li>
+			<li data-state-link="speaker">SPEAKER</li>
+			<li data-state-link="robot">ROBOTIQUE EN 2014</li>
+			<li data-state-link="cloud">CLOUD ROBOTIQUE</li>
+			<li data-state-link="iot">REVOLUTION IOT</li>
+			<li data-state-link="business">IOT AND BUSINESS</li>
+			<li data-state-link="question">QUESTIONS</li>
+		</ul>
+	</div>
 
-				<h1>reveal.js</h1>
-				<p>
-					The HTML Presentation Framework &mdash; Site coming soon
-				</p>
+		<div class="reveal">
 
-			</header>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-state='accueil' >
+					<br/><br/>
+					<h1>ROBOTS CONNECTÉS </h1>
+					<br/><br/>
+					<h2>ATTENTION À LA DÉFERLANTE</h2>
+					<br/><br/><br/>
+					<p>
+						<small>Maxence Dalmais - Worldline - <a href="http://twitter.com/maxired">@maxired</a></small>
+					</p>
+				</section>
 
-			<footer>
+				<section data-state="speaker" class="flex" style="display:flex;flex-direction: column;">
+					<h2>Qui Suis-je ?</h2>
+					<h3>Maxence Dalmais - @Maxired</h3>
+					<div class="colContainer">
+						<div class="col col1">
+							<div class="coltitle">Travail  - <i class="fa fa-university"> </i></div>
+							
+							<div class="colcontent">Ingénieur R&D @ Worldline <br/><br/>Web, Cloud, Mobile, Robotique</div>	
+					</div>
+						<div class="col col2">
+							<div class="coltitle">Social - <i class="fa fa-beer"></i></div>
+							<div class="colcontent">Membre fondateur de LyonJS<br/><br/>Participe à hckrs, Lyon Robotics, ...</div>
+						</div>
 
-				<p>
-					<a href="http://lab.hakim.se/reveal-js">Try the demo</a>
-					<a href="https://github.com/hakimel/reveal.js/releases">Download</a>
-				</p>
+						<div class="col col3">
+							<div class="coltitle">Github - <i class="fa fa-github"></i></div>
+							<div class="colcontent">Beaucoup d'experimentations<br/><br/>NodeJS, HTML5, Brainfuck, ROS, ...</div>
+						</div>
+					</div>
 
-			</footer>
+				</section>
+
+					<section data-state="robot">
+					<h2 class="red">C'est quoi un robot en 2014 ?</h2>
+
+					<div><br/>
+					<table>
+						<tr><th>Domestique</th><th>Chirurgien</th><th>Télépresence</th><th>Industriel</th></tr>
+						<tr><td>mobile</td><td>fixe</td><td>mobile</td><td>fixe</td>
+						<tr><td>autonome</td><td>téléopération</td><td>téléopération/autonome</td><td>automate</td>
+						<tr><td>corvée</td><td>précision</td><td>moyen de communication</td><td>corvée + rapidité</td>
+					</table>
+<br/><br/><br/><p class="fragment bold">
+ 					Une machine qui effectue certaines actions parmis se deplacer, bouger un membre, sentir et intéragir avec l'environnement ou manifester un comportement intelligent.
+ 	</p>
+ 					</div>
+					
+					</section>
+
+		<section data-state="robot" style="display:flex">
+					<h2 class="blue">Les robots star en 2014</h2>
+
+					<div class="panel h50 fragment" style="background-image:url(./images/roomba.jpg);background-size:cover;margin:0"	></div>
+					<div class="panel h50 fragment" style="background-image:url(./images/baxter.jpg);background-size:cover;margin:0" ></div>
+					<div class="panel h50 fragment" style="background-image:url(./images/beam.jpg);background-size:cover;margin:0"	></div>
+					<div class="panel h50 fragment" style="background-image:url(./images/pepper.jpg);background-size:cover;margin:0"	></div>
+			
+		
+					</section>
+
+<section data-state="robot">
+	<br/>
+	<h2 class="fragment" data-fragment-index="2">Vision dépassée de la robotique</h2>
+
+<svg class="fullsvg" viewBox="0 0 640 320">
+	<text x="260" y="40" fill="#00a3e0" font-size="30" >Mécanique</text>
+  	<text x="130" y="280" fill="#b0ca0f" font-size="30" >Electronique</text>
+  	<text x="340" y="280" fill="#e6431e" font-size="30" >Informatique</text>
+  
+  <circle cx="320" cy="120" r="60" stroke="#00a3e0" stroke-width="1" fill="transparent" />
+  <circle cx="280" cy="184" r="60" stroke="#b0ca0f" stroke-width="1" fill="transparent" />
+  <circle cx="360" cy="184" r="60" stroke="#e6431e" stroke-width="1" fill="transparent" />
+
+<g class="fragment" data-fragment-index="1">
+<text x="300" y="160" fill="#7f7f7f" font-size="30" >cher</text>
+<text x="150" y="100" fill="#7f7f7f" font-size="20" >long à construire</text>
+<text x="100" y="200" fill="#7f7f7f" font-size="20" >pas intelligent</text>
+<text x="400" y="100" fill="#7f7f7f" font-size="20" >compliqué</text>
+<text x="450" y="220" fill="#7f7f7f" font-size="20" >specialisé</text>
+</g>
+</svg>
+
+
+
+
+</section>
+					
+
+					<section data-state="cloud">
+					<h2 class="red">Cloud Robotics</h2>
+					<br/>
+					<quote>
+						A new approach to robotics that takes advantage of the Internet as a resource for massively parallel computation and real time sharing of vast data resources
+						<br/><br/><i>James Kuffner - Carnegie Mellon professor and Google researcher - 2010 IEEE Humanoids conference in Nashville</i>
+					</quote>
+					</section>
+
+<section>
+	<section data-state="cloud" class="empty"  data-background="./images/jibo.jpg" data-background-size:"cover" data-background-transition="slide" ></section>
+	<section data-state="cloud" data-background="./images/Hiwr-studio.jpg" data-background-transition="slide" class="empty">
+		<h2 style="text-align:left;">Hiwr.io</h2>
+		<br/>
+		<h2 style="text-align:right;">400€</h2>
+		<br/><br/>
+		<h2 style="text-align:left;">Imprimé en 3D</h2>
+		<br/>
+		<h2 style="text-align:right;">OpenSource</h2>
+
+	</section>
+</section>
+
+<section data-transition="cube" >
+
+	<section data-state="cloud">
+		<h2>Cloud</h2>
+		<div class="panel" style="background-image:url(./images/amazon.jpg);"	></div>
+		<div class="panel" style="background-image:url(./images/heroku.jpg);"	></div>
+		<div class="panel" style="background-image:url(./images/ifttt.png);" 	></div>
+		<div class="panel" style="background-image:url(./images/temboo.png);"	></div>
+		<div class="panel" style="background-image:url(./images/docker.png);" 	></div>
+	</section>
+
+
+	<section data-state="cloud" >
+	<h2>Electronique</h2>
+	<br/>
+	<div class="panel" style="background-image:url(./images/arduino.png);" 	></div>
+	<div class="panel" style="background-image:url(./images/spark.jpg);" 	></div>
+	<br/><br/><br/>
+	<div class="panel" style="background-image:url(./images/tessel.png);"	></div>
+	<div class="panel" style="background-image:url(./images/imp.jpg);"		></div>
+	</section>
+
+	<section data-state="cloud" >
+	<h2>Mécanique</h2>
+	<br/>
+	<div class="panel" style="background-image:url(./images/ultimaker.jpg);" 	></div>
+	<div class="panel" style="background-image:url(./images/fablab.jpg);" 	 	></div>
+	<br/><br/><br/>
+	<div class="panel" style="background-image:url(./images/sculpteo.jpg);" 	></div>
+	<div class="panel" style="background-image:url(./images/alibaba.jpg);" 		></div>
+	</section>
+
+	<section data-state="cloud" >
+	<h2>Financement</h2>
+	<br/>
+	<div class="panel" style="background-image:url(./images/kickstarter.jpg);" 	></div>
+	<div class="panel" style="background-image:url(./images/indiegogo.png);" 	></div>
+	<br/><br/><br/>
+	<div class="panel" style="background-image:url(./images/gafa.png);" 		></div>
+	<div class="panel" style="background-image:url(./images/vc.png);" 			></div>
+	</section>
+
+</section>
+
+<section>
+<section data-state="iot" class="empty"  data-background="./images/IoT.png" data-background-color="white" data-background-size="contain"> </section>
+<section data-state="iot" class="empty"  data-background="./images/wearables.png" data-background-color="#c9c9c9" data-background-size="contain"> </section>
+</section>
+
+
+<section>
+
+<section data-state="iot">
+<span style="color:black;font-size:60px;margin:30px;line-height:80px;">
+Wearables (the optimists view) - are tools for changing ourselves. Our bodies are high maintenance and inconvenient.Let's outsource as mush as possible, so we can then <span style="color:red">choose</span> where to place our focus ?
+</span>
+</section>
+<section data-state="iot" class="empty"  data-background="./images/elysium.jpg" data-background-size:"cover">
+	
+	<aside class="notes">
+    <h2>Robotic</h2>
+	<h2>=</h2>
+	<h2>Human Outsourcing </h2>
+	<h2>=</h2>
+	<h2>IoT</h2>
+    </aside>
+
+</section>
+
+</section>
+<section data-state="business" >
+ 
+	<h2 class="blue">Challenge technologique</h2>
+<br/><br/>
+		<div class="panel">Energie</div>
+		<div class="panel">Natural Language Processing</div>
+		<div class="panel">Traitement multimedia</div>
+		<div class="panel">Motion Planning</div>
+		<div class="panel">Prise de décision</div>
+
+</section>
+
+<section data-state="business" data-markdown>
+	 <script type="text/template">
+	# IOT = 
+	## Capteurs  + Sorties + ( cloud )
+
+
+
+	Capteurs : Pour en savoir
+
+	Périphériques de sortie : Pour réagir
+
+	<br/>
+	<div class="fragment">
+		<div class="panel30" style="background-image:url(./images/adwords.png);" 		> </div>
+		<div class="panel30" style="background-image:url(./images/gmail.png);" 			> </div>
+		<div class="panel30" style="background-image:url(./images/SMS.jpg);" 			></div>
+		<div class="panel30" style="background-image:url(./images/safari-push.png);" 	></div>
+		<div class="panel30" style="background-image:url(./images/google-glass.jpg);" 	></div>
+		<div class="panel30" style="background-image:url(./images/smartwatch.jpg);" 	></div>
+		<div class="panel30" style="background-image:url(./images/smarttv.jpg);" 		></div>
+	</div>
+
+	</script>
+</section>
+
+<section data-state="business">
+	<div class="colContainer">
+						<div class="col col1">
+							<div class="coltitle"><h2>IOT spécialisé</h2></div>
+							<div class="colcontent">
+							Construite autour de device specifique<br/><br/>
+							Orienté métier<br/><br/>
+							Collecte d'informations<br/><br/>
+							Devices pas cher<br/><br/>
+							Pas d'écran<br/><br/>
+							Non extensible<br/><br/>
+							</div>
+						</div>
+						<div class="col col2">
+							<div class="coltitle"><h2>IOT BYOD</h2></div>
+							
+							<div class="colcontent">
+								Utilise les devices de l'utilisateur<br/><br/>
+								Orienté utilisateurs<br/><br/>
+								Push d'informations<br/><br/>
+								Devices plutot cher<br/><br/>
+								Ecran<br/><br/>
+								Extensible<br/><br/>
+							</div>	
+					</div>
+						
+
+						
+					</div>
+</section>
+
+
+
+<section data-state="business" >
+ 
+	<h2 class="blue">Big Data et IoT</h2>
+<svg data-fragment-index="5"  style="position:absolute;top:0;left:0;" class="fullsvg fragment" viewBox="0 0 640 320">>
+
+<line x1="160" y1="60" x2="280" y2="230" style="stroke:#00a3e0;stroke-width:2" />	
+<line x1="480" y1="60" x2="360" y2="230" style="stroke:#00a3e0;stroke-width:2" />
+<line x1="280" y1="230" x2="280" y2="300" style="stroke:#00a3e0;stroke-width:2" />
+<line x1="360" y1="230" x2="360" y2="300" style="stroke:#00a3e0;stroke-width:2" />
+
+</svg>
+	
+	<div class="fragment" data-fragment-index="2">récupération d'info temps réel </div>
+	<div class="fragment" data-fragment-index="4">suggestions temps réel</div>
+	<div class="fragment" data-fragment-index="3">traitement temps réel </div>
+	<div class="fragment" data-fragment-index="1">traitement par lots </div>
+<br/><br/><br/><br/><br/><br/>
+
+
+	<h2 class="fragment" data-fragment-index="6">Opportunités business</h2>
+</section>
+
+<section data-state="business" >
+
+<h2 class="green">Example d'opportunités business ?</h2>
+<br/><br/><br/>
+
+	<div class="panel fragment">Maintenance</div>
+	<div class="panel fragment">Assurance voiture</div>
+	<div class="panel fragment">Shopping</div>
+	<div class="panel fragment">Pillulier electronique</div>
+
+
+</section>
+
+<section data-state="question" >
+<br/><br/>
+<h1> Merci !</h1>
+<br/><br/>
+<h2>Des questions ?<h2>
+</section>
+
+<section data-state="question" data-markdown>
+##Going further
+
+<br/><br/><br/><br/>
+
+
+[5 elements of the cloud robotics](http://e27.co/head-in-the-clouds-5-elements-of-cloud-roboticsrobots-with-their-heads-in-the-clouds-the-five-elements-of-cloud-robotics-20140829/)
+
+[Robot with their heads in the clouds](http://spectrum.ieee.org/robotics/humanoids/robots-with-their-heads-in-the-clouds)
+
+[The slow advance ofrobotics](http://www.computerworld.com/article/2835627/irobot-ceo-decries-the-slow-advance-of-robotics.html)
+
+[how the internet of things changes business models/](http://blogs.hbr.org/2014/07/how-the-internet-of-things-changes-business-models/)
+</section>
+				
+			</div>
 
 		</div>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
 
-		  ga('create', 'UA-43375306-1', 'revealjs.com');
-		  ga('send', 'pageview');
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				width:1100,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
 		</script>
+
 	</body>
 </html>
